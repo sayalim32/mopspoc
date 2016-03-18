@@ -1,0 +1,42 @@
+<ion-view view-title="MyLocation" ng-controller="LocationCtrl" >
+      <ion-content scroll="false">
+        <div class="list card">
+            <div class="list card">
+           <div class="item item-input">
+            <span class="item-stacked-label">Latitude:{{ coords.latitude | number : 6}}</span>
+             </div>
+        </div>
+            <div class="list card">
+          <div class="item item-input">
+            <span class="item-stacked-label">Longitude  :{{ coords.longitude | number : 6}}</span>
+             </div>
+        </div>
+        <div id="map-canvas">
+        </div>
+        <div ng-controller="SampleController">
+         <!--<button class="button button-block button-positive" ng-click="scheduleInstantNotification()">
+          Send Offer Notifications
+        </button>
+
+       <button class="button  button-block button-positive" ng-click="scheduleDelayedNotification()">
+          In 5 Sec
+        </button> -->
+        <button class="button button-block button-positive" ng-click="scheduleEveryMinuteNotification()">
+           Send Offer Notifications
+        </button>
+      
+        <!--<button class="button  button-block button-positive" ng-click="updateNotificationText()">
+          Update Text for Every Minute
+        </button>
+
+        <button class="button  button-block button-positive" ng-click="updateNotificationEvery()">
+          Update Every Min to Second
+        </button>-->
+        <button class="button  button-block button-positive" ng-click="cancelNotification()">
+          Cancel Notifications
+        </button>
+        </div> 
+      </ion-content>
+ 
+</ion-view>
+
